@@ -1,0 +1,10 @@
+version: '3.5'
+services:
+  vault:
+    build:
+      context: vault
+    environment:
+      VAULT_ADDR: 'http://0.0.0.0:8200'
+      VAULT_DEV_ROOT_TOKEN_ID: '00000000-0000-0000-0000-000000000000'
+    ports:
+    - "8200:8200"
